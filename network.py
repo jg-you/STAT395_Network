@@ -11,16 +11,16 @@ from collections import Counter
 
 
 # load in the preprocessed tweet data
-geotagged_tweets = pd.read_csv('data/tweets_processed.csv', dtype=str)
+geotagged_tweets = pd.read_csv('data/network_tweets.csv', dtype=str)
 
 
 # rename some columns
-geotagged_tweets.rename(columns={'tweet_text': 'text'}, inplace=True)
-geotagged_tweets.rename(columns={'tweet_created_at': 'created_at'}, inplace=True)
+# geotagged_tweets.rename(columns={'tweet_text': 'text'}, inplace=True)
+# geotagged_tweets.rename(columns={'tweet_created_at': 'created_at'}, inplace=True)
 
 # set to strings
 geotagged_tweets['tweet_type'] = geotagged_tweets['tweet_type'].apply(str)
-geotagged_tweets['user_id'] = geotagged_tweets['user_id'].apply(str)
+# geotagged_tweets['user_id'] = geotagged_tweets['user_id'].apply(str)
 geotagged_tweets['author_id'] = geotagged_tweets['author_id'].apply(str)
 
 
